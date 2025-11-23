@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess Number Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="guess-box">
-        <h1>Guess the Number Game</h1>
-        <p id="guide">Guess random number between 1 and 100</p>
-        <p id="guide">You have 10 attempts to guess the right answer</p>
+        <h1>🎯 Guess The Number</h1>
+        <p id="guide">Enter a number between 1 and 100</p>
+        
         <form action="" id="entry_box">
-            <label for="guessInput" id="guess">Guess a number</label> <br>
-            <input type="text" id="guessInput" autocomplete="off"> <br><br>
-
-            <button type="submit" id="submit">Guess</button>
+            <input type="text" id="guessInput" autocomplete="off" placeholder="Enter your guess...">
+            <button type="submit" id="submit">Submit</button>
         </form>
         
         <div id="result_box">
-            <p id="previous_guess">Previous guesses: <span class="guesses"></span></p> 
-            
-            <p id="guess_remaining">Guesses remaining: <span class="lastResult">10</span></p> 
+            <div class="stats">
+                <p id="previous_guess">Previous: <span class="guesses">-</span></p> 
+                <p id="guess_remaining">Remaining: <span class="lastResult">10</span></p> 
+            </div>
 
-            <p id="hint" class="lowOrHigh"></p>
+            <div class="message-container">
+                <p id="hint" class="lowOrHigh"></p>
+            </div>
         </div>
-        
     </div>
 
     <script src="script.js"></script>
